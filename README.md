@@ -13,6 +13,10 @@ import pqsecure as secure
 secure.send("Hello")
 ```
 
+<p align="center">
+  <img src="https://cdn.hackclub.com/01a0fde5-e65e-7b25-bd15-bd579b40e369/ezgif-72401caceb05195e.gif" width="100%">
+</p>
+
 </div>
 
 > **Status: unaudited prototype. Not production crypto. Do not use it to protect real secrets.**
