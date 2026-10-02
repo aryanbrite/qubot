@@ -3,16 +3,16 @@
     <source
       media="(prefers-color-scheme: dark)"
       srcset="https://cdn.hackclub.com/01a0fdf1-15f9-7bcb-823a-fd6677f3ed64/pqsecure_logo.svg"
-    >
+    />
     <source
       media="(prefers-color-scheme: light)"
       srcset="https://cdn.hackclub.com/01a0fdf8-060a-793d-b9c2-db9e2745af84/white.svg"
-    >
+    />
     <img
-      alt="pqsecure"
       src="https://cdn.hackclub.com/01a0fdf8-060a-793d-b9c2-db9e2745af84/white.svg"
+      alt="pqsecure"
       width="220"
-    >
+    />
   </picture>
 </p>
 <div align="center">
