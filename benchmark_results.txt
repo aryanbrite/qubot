@@ -1,3 +1,5 @@
-ML-KEM-768 handshake over localhost, 200 runs (pure-Python kyber-py)
-  median 11.2 ms | p95 21.7 ms | min 5.5 ms | max 43.1 ms
-  1000 encrypted 100-byte round trips: 0.16 ms each
+Authenticated handshake (ML-KEM-768 + ML-DSA-65) over localhost, 100 runs (pure-Python kyber-py, dilithium-py)
+  median 67.6 ms | p95 182.3 ms | min 39.0 ms | max 283.4 ms
+  of which ML-DSA-65: sign 61.0 ms (server), verify 9.0 ms (client)
+  handshake bytes: server hello 3,168 + client message 1,124 + signature 3,309 = 7,601 (v0.1 unauthenticated: 2,272)
+  1000 encrypted 100-byte round trips: 0.20 ms each

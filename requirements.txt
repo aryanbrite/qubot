@@ -1,3 +1,4 @@
 kyber-py>=1.0
+dilithium-py>=1.4
 cryptography>=41
 pytest
