@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="https://cdn.hackclub.com/01a0fdf1-15f9-7bcb-823a-fd6677f3ed64/pqsecure_logo.svg" width="180">
+</p>
 <div align="center">
 
 # pqsecure
