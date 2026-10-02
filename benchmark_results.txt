@@ -1,0 +1,3 @@
+ML-KEM-768 handshake over localhost, 200 runs (pure-Python kyber-py)
+  median 11.2 ms | p95 21.7 ms | min 5.5 ms | max 43.1 ms
+  1000 encrypted 100-byte round trips: 0.16 ms each
