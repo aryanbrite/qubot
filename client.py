@@ -1,4 +1,5 @@
 import pqsecure as secure
-reply = secure.send("Hello from the future")
-print("Post-quantum connection established")
-print("Server replied:", reply)
+with secure.Client() as c:
+    print("Post-quantum connection established")
+    print("Server authenticated with ML-DSA key:", c.server_fingerprint)
+    print("Server replied:", c.send("Hello from the future"))

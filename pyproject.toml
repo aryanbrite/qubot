@@ -1,11 +1,20 @@
 [project]
 name = "pqsecure"
-version = "0.1.0"
-description = "Prototype post-quantum secure channel: ML-KEM-768 + AES-256-GCM"
+version = "0.2.0"
+description = "Unaudited post-quantum secure-channel prototype: ML-KEM-768 + ML-DSA-65 server authentication + AES-256-GCM"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Aryan Brite" }]
 requires-python = ">=3.9"
-dependencies = ["kyber-py>=1.0", "cryptography>=41"]
+dependencies = ["kyber-py>=1.0", "dilithium-py>=1.4", "cryptography>=41"]
+
+[project.urls]
+Repository = "https://github.com/aryanbrite/qubot"
+
 [build-system]
-requires = ["setuptools"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
+
 [tool.setuptools]
 packages = ["pqsecure"]
