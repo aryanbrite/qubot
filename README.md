@@ -220,6 +220,38 @@ One test also checks the signature is a real ML-DSA signature over the transcrip
 
 ## Quick start
 
+### Install from PyPI
+
+```bash
+pip install pqsecure
+```
+
+Server and client in one script, with the server's key pinned (the safe way to connect):
+
+```python
+import threading
+import pqsecure as secure
+
+# Server side: make an ML-DSA identity. Share identity.public_key with clients
+# out of band. For a persistent key use Identity.load_or_create().
+identity = secure.Identity.generate()
+server = secure.Server("127.0.0.1", 9443, handler=lambda text: "got: " + text, identity=identity)
+threading.Thread(target=server.serve_forever, daemon=True).start()
+
+# Client side: pin that public key, so only this server is accepted.
+print(secure.send("Hello", "127.0.0.1", 9443, server_key=identity.public_key))  # got: Hello
+
+# A server with any other key is rejected.
+try:
+    secure.send("Hello", "127.0.0.1", 9443, server_key=secure.Identity.generate().public_key)
+except secure.AuthenticationError as e:
+    print("rejected:", e)
+```
+
+Without `server_key`, the client trusts the first key it sees (TOFU). Pin the key for anything that matters.
+
+### From the repo
+
 ```bash
 pip install -r requirements.txt
 python3 server.py            # terminal 1: prints its key fingerprint
